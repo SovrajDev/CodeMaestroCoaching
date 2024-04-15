@@ -30,7 +30,7 @@ function pageScrollFunctions(){
 		homeSection.classList.remove('active');
 	}
 }
-var homeSection1 = document.getElementByTagName('home');
+var homeSection1 = document.getElementById('home');
 window.addEventListener('scroll', pageScrollFunction);
 window.addEventListener('load', pageScrollFunction);
 
