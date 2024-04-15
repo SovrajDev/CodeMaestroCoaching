@@ -10,37 +10,7 @@ loginLink.addEventListener('click',()=>{
     wrapper.classList.remove('active');
 
 });
-document.getElementById('search-form').addEventListener('submit', async function(event) {
-  event.preventDefault();
-  
-  const searchTerm = document.getElementById('search-input').value;
-  const searchpass = document.getElementById('search-pass').value;
-  
-  
-  try {
-    const response = await fetch('/login1', {
-      method: 'POST', // Assuming you are searching via POST method
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({ searchTerm ,searchpass})
-    });
 
-    if (!response.ok) {
-      throw new Error('Network response was not ok');
-    }
-
-    const result = await response.text();
-
-    if (result) {
-      window.location.href=result;
-    } else {
-      document.getElementById('search-input').value = "invalid ";
-    }
-  } catch (error) {
-    console.error('There was a problem with the fetch operation:', error);
-  }
-});
 // Get the cross icon element
 // Get the sign-up form
 //const signUpForm = document.getElementById('signup-form');
