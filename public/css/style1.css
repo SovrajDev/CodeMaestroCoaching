@@ -182,7 +182,7 @@ body{
 	max-width: 2000px;
 	height: 12vh;
 	max-height: 80px;
-	background-color: var(--primary-clr);
+	background-color: #6c63ff;
 	padding: 0px 8%;
 	margin: 0px auto;
 	display: flex;
@@ -294,7 +294,7 @@ body{
 	max-width: 2000px;
 	height: 12vh;
 	max-height: 80px;
-	background-color: var(--primary-clr);
+	background-color: #6c63ff;
 	padding: 0px 8%;
 	margin: 0px auto;
 	display: flex;
