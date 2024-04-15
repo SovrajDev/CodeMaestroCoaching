@@ -18,7 +18,7 @@ function menuItemClicked(){
 	menuList.classList.remove('active');
 }
 
-var homeSection = document.querySelector('.home');
+var homeSection = document.getElementsByClassName('home');
 window.addEventListener('scroll', pageScrollFunctions);
 window.addEventListener('load', pageScrollFunctions);
 
@@ -30,7 +30,7 @@ function pageScrollFunctions(){
 		homeSection.classList.remove('active');
 	}
 }
-var homeSection1 = document.querySelector('#home');
+var homeSection1 = document.getElementByTagName('home');
 window.addEventListener('scroll', pageScrollFunction);
 window.addEventListener('load', pageScrollFunction);
 
