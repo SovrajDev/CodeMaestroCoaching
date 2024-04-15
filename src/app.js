@@ -72,9 +72,9 @@ app.post("/login1",async(req,res)=>{
     }        
     
   });
-  app.post("/forgot",(req,res)=>{
+  //app.post("/forgot",(req,res)=>{
     
-  })
+  //})
   app.post("/contact",async(req,res)=>{
     try {
      const firstname=req.body.Firstname;
