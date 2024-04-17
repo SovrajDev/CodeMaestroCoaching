@@ -22,10 +22,7 @@ app.get("/",(req,res)=>{
 app.set("trust proxy",1);
 app.use(session({
   secret: 'your_secret_key',
-    store:new SequelizeStore({
-        db:db.sequelize,
-        checkExpirationalInterval:15*60*1000,
-        expiration:15*24*60*60*1000,}),
+  
   resave: false,
     proxy:true,
     name:"Mycookie",
