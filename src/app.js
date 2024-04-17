@@ -19,11 +19,18 @@ app.set('views',template_path);
 app.get("/",(req,res)=>{
     res.render('index'); 
 });
+app.set("trust proxy",1);
 app.use(session({
   secret: 'your_secret_key',
+    store:new SequelizeStore({
+        db:db.sequelize,
+        checkExpirationalInterval:15*60*1000,
+        expiration:15*24*60*60*1000,}),
   resave: false,
+    proxy:true,
+    name:"Mycookie",
   saveUninitialized: false,
-  cookie:{maxAge:60000}
+  cookie:{secure:true,samesite:"none",httpOnly:false}
 }));
 //app.get('/course-inner',(req,res)=>{
   //res.sendFile(path.join(__dirname,static_path,'course.html'));
